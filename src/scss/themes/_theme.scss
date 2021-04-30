@@ -1,0 +1,24 @@
+@use 'utilities' as *;
+
+:root {
+    --bg1: #{$neutral-200};
+    --bg2: #{$neutral-200};
+    --bg3: #{$secondary-200};
+    --bg4: #{$secondary-100};
+    --bg5: #{$secondary-100};
+    --text-color: #{$neutral-900};
+}
+
+body {
+    background-color: var(--bg2);
+    color: var(--text-color);
+}
+
+.dark {
+    --bg1: #{$neutral-600};
+    --bg2: #{$neutral-700};
+    --bg3: #{$neutral-900};
+    --bg4: #{$neutral-700};
+    --bg5: #{$neutral-900};
+    --text-color: #{$neutral-100};
+}

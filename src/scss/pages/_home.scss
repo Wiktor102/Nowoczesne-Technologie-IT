@@ -1,0 +1,53 @@
+@use '../utilities' as *;
+
+.home {
+    overflow-x: hidden;
+    @include scroll_bar;
+
+    .main_section {
+        display: grid;
+        place-items: center;
+        position: relative;
+        height: 100vh;
+        background-image: url('../img/bg.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        overflow: hidden;
+
+        h1 {
+            padding: 1em .5em;
+            color: $neutral-100;
+            text-align: center;
+            filter: drop-shadow(3px -3px 1px $neutral-900);
+        }
+
+        a {
+            display: block;
+            position: absolute;
+            bottom: 1em;
+            color: $neutral-100;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        @media (min-width: 600px) {
+            h1 {
+                margin: 0 1em;
+                padding: 1.5em 1em;
+                background-color: rgba($neutral-100, .25);
+                border: 2px solid $neutral-100;
+            }
+        }
+
+        @media (max-width: 900px) {
+            background-size: 270%;
+            background-position-x: center;
+        }
+
+        @media (max-width: 600px) {
+            background-size: 350%;
+            background-position-x: center;
+        }
+    }
+
+}

@@ -1,0 +1,39 @@
+{
+  "name": "konkurs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url ./"
+  },
+  "keywords": [],
+  "author": "Wiktor Golicz",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.0.0",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "postcss": "^8.2.8",
+    "sass": "^1.32.8",
+    "scss": "^0.2.4"
+  },
+  "staticFiles": {
+    "staticPath": "src/php",
+    "watcherGlob": "**"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "overrideBrowserslist": [
+          "> 2%",
+          "not dead",
+          "last 2 versions"
+        ]
+      }
+    }
+  },
+  "dependencies": {
+    "comments": "^0.3.7"
+  }
+}

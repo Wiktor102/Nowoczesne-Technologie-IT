@@ -1,0 +1,140 @@
+@use '../utilities' as *;
+
+.nav {
+    display: flex;
+    align-items: center;
+
+    &__btn {
+        display: none;
+        padding: .3em;
+        color: $neutral-100;
+        cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        &:hover,
+        &:checked {
+            color: $secondary-200;
+        }
+
+    }
+
+    &__links {
+        display: flex;
+    }
+
+    &__link {
+        display: block;
+        align-self: center;
+        color: $neutral-100;
+        text-decoration: none;
+
+        &:hover {
+            color: $secondary-200;
+        }
+    }
+
+    .theme_change {
+        background: transparent;
+        color: $neutral-100;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            color: $secondary-200;
+        }
+
+        i.fa-egg {
+            animation: easter_egg 2s;
+            animation-iteration-count: infinite;
+            animation-delay: .2s;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .nav__link {
+        padding-right: 1.5em;
+
+        & + & {
+            padding-left: 1.5em;
+            border-left: 2px solid $neutral-100;
+        }
+    }
+
+    .theme_change {
+        margin-left: .5rem;
+        padding-left: 1rem;
+        border-left: 2px solid darken($primary-800, 10%) !important;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .nav {
+        padding-top: 0 !important;
+    }
+
+    .nav__links {
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: calc(100vh - 100%);
+        padding: 2em 0;
+        background-color: var(--bg4);
+        transition: opacity 0.3s ease-out;
+        transform: translateY(100%);
+
+        #nav__checkbox:not(:checked) ~ & {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #nav__checkbox:checked ~ & {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .nav__link {
+            margin: 1em 2em;
+            color: var(--text-color);
+        }
+    }
+
+    .nav__btn {
+        display: block;
+    }
+
+    .theme_change {
+        position: relative;
+        margin: 1rem auto 0;
+        padding-top: .7rem;
+        color: var(--text-color) !important;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -.5rem;
+            right: 50%;
+            width: 5rem;
+            height: 2px;
+            background-color: rgba($primary-800, .8);
+            transform: translateX(50%);
+        }
+    }
+}
+
+@keyframes easter_egg {
+    from {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

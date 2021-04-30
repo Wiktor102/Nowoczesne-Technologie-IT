@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nowoczesne Technologie IT</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="scss/main.scss">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="./js/imageSlider.js" defer></script>
+    <script src="./js/themes.js" defer></script>
+</head>
+<body class="home">
+    <header class="header">
+        <div>
+            <h1 class="logo">Nowoczesne Technologie IT</h1>
+        </div>
+
+        <nav class="nav">
+
+            <input type="checkbox" id="nav__checkbox" class="fas fa-bars nav__btn"/>
+
+            <div class="nav__links">
+                <a class="nav__link" href="#main_section">Strona główna</a>
+                <a class="nav__link" href="articles.html">Artykuły</a>
+                <a class="nav__link" href="about.html">O stronie</a>
+                <button class="theme_change" aria-label="Zmień motyw"><i class="fas fa-moon"></i></button>
+            </div>
+
+        </nav>
+    </header>
+
+    <section id="main_section" class="main_section">
+        <h1>Nowoczesne Technologie IT</h1>
+        <a class="fas fa-chevron-down" href="#section_one"></a>
+    </section>
+
+    <section class="section newest_articles" id="section_one">
+
+        <div class="newest_articles__header">
+            <h2>Najnowsze artykuły</h2>
+            <hr/>
+        </div>
+
+        <div class="newest_articles__body">
+            <i class="fas fa-chevron-left newest_articles__arrow newest_articles__arrow__left"></i>
+
+            <div class="newest_articles__images"></div>
+
+            <i class="fas fa-chevron-right newest_articles__arrow newest_articles__arrow__right"></i>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="flex">
+            <div class="col">
+                <strong>Podstrony</strong>
+
+                <div>
+                    <i class="fas fa-home"></i>
+                    <a href="#main_section" class="footer__link">Strona główna</a>
+                </div>
+
+                <div>
+                    <i class="fas fa-newspaper"></i>
+                    <a href="articles.html" class="footer__link">Artykuły</a>
+                </div>
+
+                <div>
+                    <i class="fas fa-info-circle"></i>
+                    <a href="about.html" class="footer__link">O stronie</a>
+                </div>
+
+            </div>
+
+            <div class="col">
+                <strong>Kontakt</strong>
+
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <span>wiktorgolicz1@gmail.com</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; Wiktor Golicz 2021 - Wszelkie prawa zastrzeżone
+        </div>
+    </footer>
+
+</body>
+</html>

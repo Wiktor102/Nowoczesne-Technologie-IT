@@ -1,0 +1,90 @@
+@use '../utilities' as *;
+
+.comments {
+    padding: 1.5em 1em;
+    background-color: var(--bg5);
+    border-radius: 1rem;
+
+    &__header {
+        @include fancy_font_right (var(--bg3), 4px);
+        margin: 2em .7em 1em;
+    }
+
+    &__add_comment {
+        @include button (100%, $primary-800);
+    }
+
+    .empty {
+        margin-top: 1.5rem;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .form {
+
+        input,
+        textarea,
+        label {
+            display: block;
+        }
+
+        label {
+            margin: 1em 0;
+        }
+
+        input[type=text],
+        textarea {
+            width: 100%;
+            margin-top: .7rem;
+            border: none;
+            outline-color: $accent-400;
+        }
+
+        input[type=text] {
+            padding: .7em 1em;
+            font-size: 1rem;
+            border-radius: 9999px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 10vh;
+            max-height: 60vh;
+            padding: 1em;
+            font-size: 1.1rem;
+            border-radius: 1rem 1rem 0 1rem;
+            resize: vertical;
+        }
+
+        button {
+            @include button (100%, $primary-800);
+        }
+    }
+}
+
+.comment {
+    padding: 1em;
+
+    // &__header {}
+    // &__username {}
+
+    &__date {
+        opacity: .75;
+    }
+
+    &__content {
+        margin-top: .5em;
+    }
+
+    & + & {
+        border-top: 2px dashed $neutral-100;
+    }
+
+    &:first-of-type {
+        padding-top: 1.5em;
+    }
+
+    &:last-of-type {
+        padding-bottom: 0;
+    }
+}
